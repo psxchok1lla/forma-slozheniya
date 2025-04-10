@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="color-scheme" content="dark light" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>forma slozheniya</title>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="icon" href="./favicon.svg" sizes="any" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/themes.css" />
+  <script src="./scripts/set-theme.js"></script>
+  <script src="./scripts/sum.js"></script>
+</head>
+<header class="header">
+  <nav class="docs-button">
+    <a href="index.html" class = "docs-link" >сумматор</a>
+  </nav>
+  <nav class="theme-menu header__theme-menu">
+    <ul class="theme-menu__list">
+      <li class="theme-menu__item">
+        <button type="button" data-theme="dark" class="theme-menu__button">
+          Темно
+        </button>
+      </li>
+      <li class="theme-menu__item">
+        <button
+          type="button"
+          data-theme="auto"
+          disabled
+          class="theme-menu__button"
+        >
+          Авто
+        </button>
+      </li>
+      <li class="theme-menu__item">
+        <button type="button" data-theme="light" class="theme-menu__button">
+          Светло
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+<body class = "page">
+
+  <main class="docs-content">
+    <section class="docs-block">
+      <h2>User Story</h2>
+        <ul class="docs-text">
+          <li>US-1:Как пользователь, я хочу ввести два числа и получить их сумму, чтобы быстро выполнять простые вычисления прямо на сайте.</li>
+          <li>US-2:Как пользователь, я хочу иметь возможность выбирать тему оформления сайта (тёмную или светлую), чтобы комфортно использовать интерфейс в разных условиях освещения.</li>
+        </ul>
+    </section>
+
+    <section class="docs-block">
+      <h2>Use Case</h2>
+      <p class="docs-text">Use Case: Получение суммы двух чисел<br>
+        Цель:<br>
+        &nbsp;&nbsp;Пользователь хочет получить результат сложения двух чисел.<br>
+        Предусловия:<br>
+        &nbsp;&nbsp;Пользователь должен открыть сайт, где доступна форма ввода.<br>
+        Акторы:<br>
+        &nbsp;&nbsp;Основной: Пользователь<br>
+        В&nbsp;&nbsp;торичный: Система<br>
+        Основной поток событий:<br>
+        &nbsp;&nbsp;Пользователь вводит первое число в соответствующее поле.<br>
+        &nbsp;&nbsp;Пользователь вводит второе число.<br>
+        &nbsp;&nbsp;Пользователь нажимает кнопку «Посчитать».<br>
+        &nbsp;&nbsp;Система вычисляет сумму двух чисел.<br>
+        &nbsp;&nbsp;Система отображает результат на экране.<br>
+        Альтернативные сценарии: <br>
+        &nbsp;&nbsp;При пустом вводе — считается как 0<br>
+        Исключения:<br>
+        &nbsp;&nbsp;Если JavaScript отключён или нарушено выполнение скрипта, пользователь не получит результат.<br>
+        &nbsp;&nbsp;Если при расчётах требуется серверная часть (в будущем), и соединение будет недоступно — пользователь должен получить уведомление о сбое.<br>
+        Постусловие:<br>
+        &nbsp;&nbsp;Результат вычислений успешно отображён пользователю.</p>
+    </section>
+
+    <section class="docs-block">
+      <h2>Функциональные требования</h2>
+      <ul class="docs-text">
+        <li>FR-1: Система должна предоставлять пользователю два числовых поля для ввода значений.</li>
+        <li>FR-2: Система должна отображать кнопку «Посчитать» под полями ввода.</li>
+        <li>FR-3: После нажатия кнопки «Посчитать» система должна вычислять сумму введённых чисел.</li>
+        <li>FR-4: Система должна отображать результат вычисления на той же странице без перезагрузки.</li>
+        <li>FR-5: Пользователь должен иметь возможность выбрать тему оформления: тёмную, светлую или авто (по системной теме).</li>
+        <li>FR-6: Выбранная тема должна применяться мгновенно и визуально влиять на все элементы интерфейса.</li>
+      </ul>
+    </section>
+
+    <section class="docs-block">
+      <h2>Нефункциональные требования</h2>
+      <ul class="docs-text">
+        <li>NFR-1: Система должна отображать результат вычисления менее чем за 1 секунду.</li>
+        <li>NFR-2: Интерфейс должен быть адаптивным и корректно отображаться на экранах от 320px до 1440px.</li>
+        <li>NFR-3: NFR-3: Тема должна сохраняться между страницами (если будет расширение на мультистраничность).</li>
+        <li>NFR-4: Все элементы интерфейса должны быть доступны с клавиатуры (доступность/усв).</li>
+        <li>NFR-5: Система должна быть реализована с использованием HTML, CSS и JavaScript без серверной логики.</li>
+        <li>NFR-6: В случае непредвиденных ошибок (ввод некорректных данных, проблемы выполнения скрипта, недоступность JS) интерфейс должен предоставлять пользователю понятное сообщение.</li>
+      </ul>
+    </section>
+
+    <section class="docs-block">
+      <h2>Диаграмма последовательности</h2>
+      <img src="./svg/sequence.svg" alt="Sequence diagram">
+    </section>
+
+    <section class="docs-block">
+      <h2>BPMN-диаграмма</h2>
+      <img src="./svg/bpmn.svg" alt="BPMN diagram">
+    </section>
+
+    <a href="index.html" class="back-link">← Вернуться на главную</a>
+  </main>
+</body>
+</html>

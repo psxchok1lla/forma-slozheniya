@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="color-scheme" content="dark light" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>forma slozheniya</title>
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="icon" href="./favicon.svg" sizes="any" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/themes.css" />
+  <script src="./scripts/set-theme.js"></script>
+  <script src="./scripts/sum.js"></script>
+</head>
+<body class="page">
+  <header class="header">
+    <nav class="docs-button">
+      <a href="docs.html" class = "docs-link" >документация</a>
+    </nav>
+    <nav class="theme-menu header__theme-menu">
+      <ul class="theme-menu__list">
+        <li class="theme-menu__item">
+          <button type="button" data-theme="dark" class="theme-menu__button">
+            Темно
+          </button>
+        </li>
+        <li class="theme-menu__item">
+          <button
+            type="button"
+            data-theme="auto"
+            disabled
+            class="theme-menu__button"
+          >
+            Авто
+          </button>
+        </li>
+        <li class="theme-menu__item">
+          <button type="button" data-theme="light" class="theme-menu__button">
+            Светло
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class = "content">
+    <div class="form-container">
+      <h3>Сумматор</h3>
+      <input type="number" id="num1" placeholder="Введите первое число" />
+      <input type="number" id="num2" placeholder="Введите второе число" />
+      <button onclick="calculate()">Посчитать</button>
+      <div class="result" id="result">Результат появится здесь</div>
+    </div>
+  </main>
+  
+</body>
+</html>

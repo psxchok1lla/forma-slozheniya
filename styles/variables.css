@@ -1,0 +1,23 @@
+:root {
+  :root {
+    --accent-color: rgba(0, 150, 255, 1); 
+    --color-gradient-start: rgba(0, 100, 180, 1); 
+    --color-gradient-end: rgba(0, 40, 80, 1);
+    --background-color: rgba(10, 10, 20, 1); 
+    --pointer-color: rgba(0, 150, 255, 1);
+    --pointer-text-color: rgba(0, 150, 255, 1);
+    --hover-text-color: rgba(255, 255, 255, 0.7);
+    --active-text-color: rgba(255, 255, 255, 0.9);
+    --gradient-start-color: rgba(10, 10, 20, 1);
+    --gradient-interim-color: rgba(20, 20, 40, 0.2);
+    --main-font-family: "Inter Variable", sans-serif;
+    --accent-font-family: "PressStart2P", fantasy;
+    --button-color-text: rgba(0, 150, 255, 1);
+    --text-background-highlight: rgba(255, 255, 255, 0.05);
+    --text-hightlight: rgba(255, 255, 255, 0.9);
+    --contour: rgba(0, 150, 255, 1);
+    --filling: rgba(255, 50, 50, 1); 
+    --wght: 900;
+  }
+  
+}
