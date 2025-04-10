@@ -283,10 +283,13 @@ section.docs-block:hover {
 
 section.docs-block h2 {
   font-family: var(--accent-font-family);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.3rem); 
   margin-bottom: 1rem;
   text-transform: uppercase;
   color: var(--pointer-text-color);
+  word-break: break-word;    
+  hyphens: auto;                
+  overflow-wrap: break-word; 
 }
 
 section.docs-block {
