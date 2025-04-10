@@ -1,15 +1,12 @@
+// Установка темы ДО загрузки CSS
+const savedTheme = localStorage.getItem("theme") || "auto";
+document.documentElement.classList.add(`theme-${savedTheme}`);
+
 function changeTheme(theme) {
   document.documentElement.className = "";
   document.documentElement.classList.add(`theme-${theme}`);
   localStorage.setItem("theme", theme);
 }
-
-(function initTheme() {
-  const theme = localStorage.getItem("theme");
-  if (theme) {
-    changeTheme(theme);
-  }
-})();
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
@@ -25,18 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if ([...root.classList].includes("theme-light")) {
-    setDisabled("light");
-  } else if ([...root.classList].includes("theme-dark")) {
-    setDisabled("dark");
-  } else {
-    setDisabled("auto");
-  }
+  setDisabled(savedTheme);
 
   themeButtons.forEach((button) => {
     button.onclick = () => {
-      changeTheme(button.getAttribute("data-theme"));
-      setDisabled(button.getAttribute("data-theme"));
+      const newTheme = button.getAttribute("data-theme");
+      changeTheme(newTheme);
+      setDisabled(newTheme);
     };
   });
 });
